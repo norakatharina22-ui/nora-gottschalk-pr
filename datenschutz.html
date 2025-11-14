@@ -4,13 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datenschutzerklärung - Nora Gottschalk</title>
-    <!-- Tailwind CSS CDN für das Styling -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts für die Typografie -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
+        /* INTER - REGULAR (400) */
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            /* Pfad zur Datei, ausgehend von der HTML-Datei */
+            src: url('./fonts/inter-v20-latin-regular.woff2') format('woff2');
+        }
+
+        /* INTER - MEDIUM (500) */
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url('./fonts/inter-v20-latin-500.woff2') format('woff2');
+        }
+
+        /* INTER - SEMIBOLD (600) */
+        @font-face {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url('./fonts/inter-v20-latin-600.woff2') format('woff2');
+        }
+
+        /* PLAYFAIR DISPLAY - REGULAR (400) */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('./fonts/playfair-display-v40-latin-regular.woff2') format('woff2');
+        }
+
+        /* PLAYFAIR DISPLAY - MEDIUM (500) */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 500;
+            font-display: swap;
+            src: url('./fonts/playfair-display-v40-latin-500.woff2') format('woff2');
+        }
+
+        /* PLAYFAIR DISPLAY - SEMIBOLD (600) */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url('./fonts/playfair-display-v40-latin-600.woff2') format('woff2');
+        }
+
+        /* PLAYFAIR DISPLAY - BOLD (700) */
+        @font-face {
+            font-family: 'Playfair Display';
+            font-style: normal;
+            font-weight: 700;
+            font-display: swap;
+            src: url('./fonts/playfair-display-v40-latin-700.woff2') format('woff2');
+        }
+
+        /* ANWENDUNG DER SCHRIFTEN */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f0f6f8;
@@ -29,21 +90,15 @@
         </h1>
 
         <div class="prose prose-lg mx-auto text-gray-700">
-            <!-- WICHTIG: DIES IST EIN ENTWURF UND MUSS MIT IHREN SPEZIFISCHEN DATEN ANGEPASST WERDEN. EINE RECHTSBERATUNG WIRD EMPFOHLEN. -->
-            <h3>Verantwortliche Stelle</h3>
-            <p>
-                Nora Gottschalk<br>
-                Palmaille 126a<br>
-                22767 Hamburg<br>
-                <a href="mailto:contact@noragottschalk.de">contact@noragottschalk.de</a>
-            </p>
+
+            <h2>Allgemeiner Hinweis und Pflichtinformationen</h2>
 
             <h3 class="mt-4">Datenverarbeitung auf dieser Website</h3>
             <p>
                 Wir erfassen und verarbeiten keine personenbezogenen Daten, die über das technisch notwendige Maß hinausgehen. Dazu gehören die Server-Log-Dateien des Providers zur Gewährleistung der Stabilität und Sicherheit der Website (Art. 6 Abs. 1 lit. f DSGVO).
             </p>
             <p>
-                Unsere Website nutzt Google Fonts und das Tailwind CSS CDN, um Schriftarten und Styles zu laden. Dabei wird Ihre IP-Adresse an die Server der Anbieter übermittelt. Dies geschieht zur optisch ansprechenden Darstellung und technischen Optimierung unserer Website. Die Rechtsgrundlage ist unser berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO).
+                Wir nutzen **lokal gehostete Schriftarten** (Google Fonts wurden von unserem Server entfernt), wodurch keine Verbindung zu externen Schriftarten-Servern hergestellt wird. Allerdings wird beim Laden des **Tailwind CSS CDN** Ihre IP-Adresse an deren Server übermittelt. Dies geschieht zur optisch ansprechenden Darstellung und technischen Optimierung unserer Website. Die Rechtsgrundlage ist unser berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO).
             </p>
 
             <h3 class="mt-4">Ihre Rechte</h3>
@@ -53,7 +108,6 @@
         </div>
     </main>
 
-    <!-- Footer mit Link zur Startseite -->
     <footer class="py-8 text-center text-gray-500 bg-[#eef2f5]">
         <div class="container mx-auto px-4">
             <p>&copy; 2024 Nora Gottschalk. Alle Rechte vorbehalten.</p>
