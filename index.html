@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nora Gottschalk - PR & Text</title>
+    <!-- Tailwind CSS CDN für das Styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- LOKALE SCHRIFTARTEN (DSGVO-KONFORM) -->
     <style>
         /* INTER - REGULAR (400) */
         @font-face {
@@ -80,17 +82,33 @@
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
         }
+        
+        /* CSS ZUR TELEFONNUMMER-VERFREMDUNG (OBFUSKATION) */
+        .phone-obf {
+            unicode-bidi: bidi-override; /* Erzwingt die Umkehrung */
+            direction: rtl; /* Kehrt die Zeichenreihenfolge um (Start: 557...) */
+            display: inline-block; /* Wichtig für korrekte Anzeige */
+        }
+        
+        /* Sorgt dafür, dass der 'tel:'-Link im Link-Attribut nicht umgedreht wird */
+        .phone-obf a {
+            unicode-bidi: initial;
+            direction: ltr;
+        }
     </style>
 </head>
 <body class="antialiased">
 
+    <!-- Startseite mit Logo und Dienstleistungen -->
     <header class="relative overflow-hidden pt-16 sm:pt-24 pb-16 bg-[#eef2f5]">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex flex-col items-center">
+            <!-- Logo-Bereich -->
             <div class="w-full max-w-2xl">
                 <h1 class="text-6xl sm:text-7xl lg:text-8xl font-bold leading-none tracking-tight text-left mb-8 text-[#2c3e50]">
                     nora<br>gottschalk
                 </h1>
             </div>
+            <!-- Dienstleistungs-Text -->
             <div class="w-full max-w-2xl text-left">
                 <p class="text-xl sm:text-2xl text-gray-700 leading-relaxed">
                     Öffentlichkeitsarbeit für Autoren, Bücher, Verlage.
@@ -98,26 +116,35 @@
                 <p class="text-xl sm:text-2xl text-gray-700 leading-relaxed">
                     Texterstellung & Redaktion.
                 </p>
-                
+                <p class="text-xl sm:text-2xl text-gray-700 leading-relaxed mb-8">
+                    Beratung & Konzeption.
+                </p>
             </div>
         </div>
     </header>
 
+    <!-- Kontakt-Sektion -->
     <section id="contact" class="pt-16 pb-16 sm:pb-24 bg-white">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl flex flex-col items-center">
             <div class="w-full max-w-2xl text-left">
                 <div class="flex flex-col items-start gap-3">
                     <a href="mailto:contact@noragottschalk.de" class="text-lg text-gray-700 leading-relaxed hover:underline">contact@noragottschalk.de</a>
-                    <a href="tel:+4915785900755" class="text-lg text-gray-700 leading-relaxed hover:underline">+49 1578 5900755</a>
+                    
+                    <!-- Telefonnummer: Anzeige umgekehrt, Link korrekt -->
+                    <div class="phone-obf text-lg text-gray-700 leading-relaxed">
+                        <!-- Bot liest von links: 55700958751 94+ -->
+                        <a href="tel:+4915785900755" class="hover:underline">55700958751 94+</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="py-8 text-center text-gray-500 bg-[#eef2f5]">
         <div class="container mx-auto px-4">
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4 text-sm">
-                <p>&copy; 2025 Nora Gottschalk. Alle Rechte vorbehalten.</p>
+                <p>&copy; 2024 Nora Gottschalk. Alle Rechte vorbehalten.</p>
                 <a href="impressum.html" class="hover:underline">Impressum</a>
                 <a href="datenschutz.html" class="hover:underline">Datenschutz</a>
             </div>
