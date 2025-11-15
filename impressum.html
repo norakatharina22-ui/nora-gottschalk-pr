@@ -80,6 +80,13 @@
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
         }
+        
+        /* CSS ZUR TELEFONNUMMER-VERFREMDUNG (OBFUSKATION) */
+        .phone-obf {
+            unicode-bidi: bidi-override; /* Erzwingt die Umkehrung */
+            direction: rtl; /* Kehrt die Zeichenreihenfolge um (Start: 557...) */
+            display: inline-block; /* Wichtig für korrekte Anzeige */
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -99,7 +106,8 @@
 
             <p class="mt-4">
                 <a href="mailto:contact@noragottschalk.de">contact@noragottschalk.de</a><br>
-                +49 1578 5900755
+                <!-- TELEFONNUMMER ALS EINFACHER TEXT, UMGEKEHRT FÜR BOTS -->
+                <span class="phone-obf">557 00958 751 94+</span>
             </p>
             
             <p class="mt-4">
