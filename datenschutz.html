@@ -77,16 +77,11 @@
             background-color: #f0f6f8;
             color: #4a4a4a;
         }
-        /* H1 verwendet Playfair Display für den Haupttitel (wie Impressum) */
-        h1 {
+        /* H1 verwendet Playfair Display (wie Impressum) */
+        h1, h2, h3 {
             font-family: 'Playfair Display', serif;
         }
-        /* Custom class für die Sektionsüberschriften, die Playfair, aber NICHT fett sein sollen */
-        .datenschutz-section-title {
-            font-family: 'Playfair Display', serif;
-            font-weight: 400 !important; /* Stellt sicher, dass es nicht fett ist */
-            font-size: 1.125em; /* Stellt die Standardgröße des umliegenden Fließtextes sicher */
-        }
+        /* HINWEIS: Sektionstitel sind nun einfache <p>-Tags (Inter-Schrift, nicht fett) */
     </style>
 </head>
 <body class="antialiased">
@@ -98,7 +93,7 @@
 
         <div class="prose prose-lg mx-auto text-gray-700">
             
-            <p class="datenschutz-section-title">Verantwortliche Stelle</p> 
+            <p>Verantwortliche Stelle</p> 
             <p>
                 Nora Gottschalk<br>
                 Palmaille 126a<br>
@@ -106,7 +101,7 @@
                 E-Mail: <a href="mailto:contact@noragottschalk.de">contact@noragottschalk.de</a>
             </p>
 
-            <p class="datenschutz-section-title mt-4">Datenverarbeitung auf dieser Website</p>
+            <p class="mt-4">Datenverarbeitung auf dieser Website</p>
             <p>
                 Wir erfassen und verarbeiten keine personenbezogenen Daten, die über das technisch notwendige Maß hinausgehen. Dazu gehören die Server-Log-Dateien des Providers (GitHub Pages) zur Gewährleistung der Stabilität und Sicherheit der Website (Art. 6 Abs. 1 lit. f DSGVO).
             </p>
@@ -114,7 +109,7 @@
                 Wir nutzen lokal gehostete Schriftarten (Google Fonts lokal), wodurch keine Daten an Google übermittelt werden. Allerdings wird beim Laden des Tailwind CSS CDN Ihre IP-Adresse an deren Server übermittelt. Dies geschieht zur optisch ansprechenden Darstellung und technischen Optimierung unserer Website. Die Rechtsgrundlage ist unser berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO).
             </p>
 
-            <p class="datenschutz-section-title mt-4">Ihre Rechte</p>
+            <p class="mt-4">Ihre Rechte</p>
             <p>
                 Sie haben das Recht, jederzeit Auskunft über Ihre Daten zu erhalten sowie deren Berichtigung, Löschung oder Einschränkung der Verarbeitung zu verlangen. Wenden Sie sich bei Fragen gerne an uns.
             </p>
