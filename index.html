@@ -90,11 +90,7 @@
             display: inline-block; /* Wichtig für korrekte Anzeige */
         }
         
-        /* Sorgt dafür, dass der 'tel:'-Link im Link-Attribut nicht umgedreht wird */
-        .phone-obf a {
-            unicode-bidi: initial;
-            direction: ltr;
-        }
+        /* Die CSS-Regel für 'a' innerhalb von phone-obf wird hier überflüssig, da wir das <a>-Tag entfernen */
     </style>
 </head>
 <body class="antialiased">
@@ -130,11 +126,9 @@
                 <div class="flex flex-col items-start gap-3">
                     <a href="mailto:contact@noragottschalk.de" class="text-lg text-gray-700 leading-relaxed hover:underline">contact@noragottschalk.de</a>
                     
-                    <!-- Telefonnummer: Anzeige umgekehrt, Link korrekt -->
-                    <div class="phone-obf text-lg text-gray-700 leading-relaxed">
-                        <!-- Bot liest von links: 55700958751 94+ -->
-                        <a href="tel:+4915785900755" class="hover:underline">55700958751 94+</a>
-                    </div>
+                    <!-- TELEFONNUMMER ALS EINFACHER TEXT (kein <a>-Tag) -->
+                    <!-- Die Nummer ist im Quellcode UMGEKEHRT! (+49 1578 5900755) -->
+                    <span class="phone-obf text-lg text-gray-700 leading-relaxed">55700958751 94+</span>
                 </div>
             </div>
         </div>
